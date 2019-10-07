@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserDataEntry">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UserDataEntry">
+
+
+        <TextView
+            android:id="@+id/height_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginEnd="8dp"
+            android:text="Visina (u cm):"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.003"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/weight_textview"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Težina (u kg):"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/height_textview" />
+
+        <TextView
+            android:id="@+id/age_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Godine:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weight_textview" />
+
+
+        <TextView
+            android:id="@+id/activitylvl_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="320dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Fizički sam aktivan/na po barem sat vremena: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/goal_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="84dp"
+            android:layout_marginRight="84dp"
+            android:layout_marginBottom="196dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Što želim postići?"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/spinner_goal"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_goal_edit"
+            android:layout_width="151dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="72dp"
+            android:layout_marginRight="72dp"
+            android:layout_marginBottom="192dp"
+            android:spinnerMode="dialog"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:entries="@array/array_goal"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginRight="150dp"
+            android:layout_marginBottom="240dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/activitylvl_textview">
+
+            <RadioButton
+                android:id="@+id/radButton1Edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Manje od jednom tjedno" />
+
+            <RadioButton
+                android:id="@+id/radButton2Edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1 do 3 puta tjedno" />
+
+            <RadioButton
+                android:id="@+id/radButton3Edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="4 do 6 puta tjedno" />
+
+            <RadioButton
+                android:id="@+id/radButton4Edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Svaki dan" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/edit_height_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edit_weight_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="40dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edit_age_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="40dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/edit_submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="120dp"
+            android:textSize="20dp"
+            android:text="Potvrdi!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:textColor="@android:color/white"
+            android:background="@drawable/circle"
+            />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="90dp"
+            android:layout_height="106dp"
+            android:layout_marginTop="616dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+
+        <Switch
+            android:id="@+id/gender_switch_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="220dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:showText="true"
+
+            android:switchPadding="105dp"
+            android:text="Spol"
+            android:switchTextAppearance="@style/dd"
+            android:textOff="♂"
+            android:textOn="♀"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
